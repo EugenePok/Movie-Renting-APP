@@ -107,3 +107,15 @@ D:\Git\ASP.Net Tutorial\Vidly\Vidly\obj\Debug\Vidly.csproj.CoreCompileInputs.cac
 D:\Git\ASP.Net Tutorial\Vidly\Vidly\obj\Debug\Vidly.csproj.CopyComplete
 D:\Git\ASP.Net Tutorial\Vidly\Vidly\obj\Debug\Vidly.dll
 D:\Git\ASP.Net Tutorial\Vidly\Vidly\obj\Debug\Vidly.pdb
+D:\Git\ASP.Net Tutorial\Vidly\Vidly\obj\Debug\Vidly.Migrations.InitialModel.resources
+D:\Git\ASP.Net Tutorial\Vidly\Vidly\obj\Debug\Vidly.csproj.GenerateResource.cache
+D:\Git\ASP.Net Tutorial\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddIsSubscribedToCustomer.resources
+D:\Git\ASP.Net Tutorial\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddMembershipType.resources
+D:\Git\ASP.Net Tutorial\Vidly\Vidly\obj\Debug\Vidly.Migrations.PopulateMembershipTypes.resources
+D:\Git\ASP.Net Tutorial\Vidly\Vidly\obj\Debug\Vidly.Migrations.ApplyAnnotationsToCustomerName.resources
+D:\Git\ASP.Net Tutorial\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddNameToMembershipTypes.resources
+D:\Git\ASP.Net Tutorial\Vidly\Vidly\obj\Debug\Vidly.Migrations.SetNameOfMembershipTypes.resources
+D:\Git\ASP.Net Tutorial\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddBirthdateToCustomer.resources
+D:\Git\ASP.Net Tutorial\Vidly\Vidly\obj\Debug\Vidly.Migrations.UpdateNameAsNotNull.resources
+D:\Git\ASP.Net Tutorial\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddMovie.resources
+D:\Git\ASP.Net Tutorial\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddGenre.resources
