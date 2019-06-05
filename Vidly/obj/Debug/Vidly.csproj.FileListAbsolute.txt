@@ -119,3 +119,11 @@ D:\Git\ASP.Net Tutorial\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddBirthdateToCus
 D:\Git\ASP.Net Tutorial\Vidly\Vidly\obj\Debug\Vidly.Migrations.UpdateNameAsNotNull.resources
 D:\Git\ASP.Net Tutorial\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddMovie.resources
 D:\Git\ASP.Net Tutorial\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddGenre.resources
+D:\Git\ASP.Net Tutorial\Vidly\Vidly\bin\System.Net.Http.Formatting.dll
+D:\Git\ASP.Net Tutorial\Vidly\Vidly\bin\System.Web.Http.dll
+D:\Git\ASP.Net Tutorial\Vidly\Vidly\bin\System.Web.Http.WebHost.dll
+D:\Git\ASP.Net Tutorial\Vidly\Vidly\bin\System.Net.Http.Formatting.xml
+D:\Git\ASP.Net Tutorial\Vidly\Vidly\bin\System.Web.Http.xml
+D:\Git\ASP.Net Tutorial\Vidly\Vidly\bin\System.Web.Http.WebHost.xml
+D:\Git\ASP.Net Tutorial\Vidly\Vidly\bin\AutoMapper.dll
+D:\Git\ASP.Net Tutorial\Vidly\Vidly\bin\AutoMapper.xml
