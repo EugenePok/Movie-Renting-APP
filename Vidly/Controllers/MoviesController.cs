@@ -57,7 +57,6 @@ namespace Vidly.Controllers
                 {
                     Genres = _context.Genres.ToList()
                 };
-                return View("MovieForm", viewModel);
             }
 
             if (movie.Id == 0)
