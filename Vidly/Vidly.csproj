@@ -19,7 +19,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44391</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -192,6 +192,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\CustomersController.cs" />
     <Compile Include="Controllers\Api\MoviesController.cs" />
+    <Compile Include="Controllers\Api\RentalsController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -200,6 +201,7 @@
     <Compile Include="Dtos\GenreDto.cs" />
     <Compile Include="Dtos\MembershipTypeDto.cs" />
     <Compile Include="Dtos\MovieDto.cs" />
+    <Compile Include="Dtos\RentalDto.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -247,6 +249,26 @@
     <Compile Include="Migrations\201905121751211_AddGenre.Designer.cs">
       <DependentUpon>201905121751211_AddGenre.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201906161638275_SeedUsers.cs" />
+    <Compile Include="Migrations\201906161638275_SeedUsers.Designer.cs">
+      <DependentUpon>201906161638275_SeedUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906161658214_AddIcNumberToApplicationUser.cs" />
+    <Compile Include="Migrations\201906161658214_AddIcNumberToApplicationUser.Designer.cs">
+      <DependentUpon>201906161658214_AddIcNumberToApplicationUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906181314237_AddRentalToModel.cs" />
+    <Compile Include="Migrations\201906181314237_AddRentalToModel.Designer.cs">
+      <DependentUpon>201906181314237_AddRentalToModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906181429152_AddNumberAvailableToMovie.cs" />
+    <Compile Include="Migrations\201906181429152_AddNumberAvailableToMovie.Designer.cs">
+      <DependentUpon>201906181429152_AddNumberAvailableToMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906181500130_AddPhoneToUser.cs" />
+    <Compile Include="Migrations\201906181500130_AddPhoneToUser.Designer.cs">
+      <DependentUpon>201906181500130_AddPhoneToUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -256,6 +278,8 @@
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Min18YearsIfAMember.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\Rental.cs" />
+    <Compile Include="Models\RoleName.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\CustomerFormViewModel.cs" />
@@ -519,7 +543,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Customer\Details.cshtml" />
     <Content Include="Views\Customer\Index.cshtml" />
-    <Content Include="Views\Movies\Index.cshtml" />
+    <Content Include="Views\Movies\List.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
     <Content Include="Views\Movies\Details.cshtml" />
     <Content Include="Views\Customer\CustomerForm.cshtml" />
@@ -533,6 +557,7 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Movies\MovieForm.cshtml" />
+    <Content Include="Views\Movies\ReadonlyList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -576,6 +601,21 @@
     <EmbeddedResource Include="Migrations\201905121751211_AddGenre.resx">
       <DependentUpon>201905121751211_AddGenre.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906161638275_SeedUsers.resx">
+      <DependentUpon>201906161638275_SeedUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906161658214_AddIcNumberToApplicationUser.resx">
+      <DependentUpon>201906161658214_AddIcNumberToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906181314237_AddRentalToModel.resx">
+      <DependentUpon>201906181314237_AddRentalToModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906181429152_AddNumberAvailableToMovie.resx">
+      <DependentUpon>201906181429152_AddNumberAvailableToMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906181500130_AddPhoneToUser.resx">
+      <DependentUpon>201906181500130_AddPhoneToUser.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
@@ -602,7 +642,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>55788</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:55788/</IISUrl>
+          <IISUrl>https://localhost:44391/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

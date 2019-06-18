@@ -127,3 +127,8 @@ D:\Git\ASP.Net Tutorial\Vidly\Vidly\bin\System.Web.Http.xml
 D:\Git\ASP.Net Tutorial\Vidly\Vidly\bin\System.Web.Http.WebHost.xml
 D:\Git\ASP.Net Tutorial\Vidly\Vidly\bin\AutoMapper.dll
 D:\Git\ASP.Net Tutorial\Vidly\Vidly\bin\AutoMapper.xml
+D:\Git\ASP.Net Tutorial\Vidly\Vidly\obj\Debug\Vidly.Migrations.SeedUsers.resources
+D:\Git\ASP.Net Tutorial\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddIcNumberToApplicationUser.resources
+D:\Git\ASP.Net Tutorial\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddRentalToModel.resources
+D:\Git\ASP.Net Tutorial\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddNumberAvailableToMovie.resources
+D:\Git\ASP.Net Tutorial\Vidly\Vidly\obj\Debug\Vidly.Migrations.AddPhoneToUser.resources
