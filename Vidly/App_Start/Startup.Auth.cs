@@ -56,7 +56,7 @@ namespace MovieWeb
 
             app.UseFacebookAuthentication(
                appId: "592539414589619",
-               appSecret: "");
+               appSecret: "592539414589619");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{

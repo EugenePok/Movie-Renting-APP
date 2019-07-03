@@ -5,16 +5,17 @@
 }
 
 <h2>Customers</h2>
+    @Html.ActionLink("New Customer", "New", "Customer", null, new { @class = "btn btn-primary" })
+
 <table id="customers" class="table table-bordered table-hover">
     <thead>
-    <tr>
-        <th>Customer</th>
-        <th>Membership Type</th>
-        <th>Delete</th>
-    </tr>
+        <tr>
+            <th>Customer</th>
+            <th>Membership Type</th>
+            <th>Delete</th>
+        </tr>
     </thead>
-    <tbody>
-    </tbody>
+    <tbody></tbody>
 </table>
 
 @section scripts
@@ -25,31 +26,31 @@
                 ajax: {
                     url: "/api/customers",
                     dataSrc: ""
-                        
+
                 },
                 columns: [
                     {
                         data: "name",
-                        render: function(data,type,customers) {
+                        render: function (data, type, customers) {
                             return "<a href='/customer/edit/" + customers.id + "'>" + customers.name + "</a>";
                         }
                     },
                     {
-                        data : "membershipType.name"
+                        data: "membershipType.name"
                     },
                     {
                         data: "id",
-                        render: function(data) {
+                        render: function (data) {
                             return "<button class='btn-link js-delete' data-customer-id=" + data + ">Delete</button>";
                         }
                     }
-                    ]
+                ]
             });
-            $("#customers").on("click",".js-delete",
-                function() {
+            $("#customers").on("click", ".js-delete",
+                function () {
                     var button = $(this);
                     bootbox.confirm("Are you sure you want to delete this customer?",
-                        function(result) {
+                        function (result) {
                             if (result) {
                                 $.ajax({
                                     url: "/api/customers/" + button.attr("data-customer-id"),
