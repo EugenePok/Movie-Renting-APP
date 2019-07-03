@@ -6,9 +6,9 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using Vidly.Models;
+using MovieWeb.Models;
 
-namespace Vidly.Controllers
+namespace MovieWeb.Controllers
 {
     [Authorize]
     public class ManageController : Controller

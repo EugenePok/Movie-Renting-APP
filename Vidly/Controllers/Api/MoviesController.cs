@@ -6,10 +6,10 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using AutoMapper;
-using Vidly.Dtos;
-using Vidly.Models;
+using MovieWeb.Dtos;
+using MovieWeb.Models;
 
-namespace Vidly.Controllers.Api
+namespace MovieWeb.Controllers.Api
 {
     public class MoviesController : ApiController
     {
@@ -21,12 +21,16 @@ namespace Vidly.Controllers.Api
         }
 
         //GET api/movies
-        public IHttpActionResult GetMovies()
+        public IHttpActionResult GetMovies(string query = null)
         {
-            return Ok(_context.Movies.
-                Include(m => m.Genre).
-                ToList().
-                Select(Mapper.Map<Movie,MovieDto>));
+            var moviesQuery = _context.Movies.Include(m => m.Genre).Where(m => m.NumberInStock > 0);
+
+            if (!string.IsNullOrWhiteSpace(query))
+                moviesQuery = moviesQuery.Where(m => m.Name.Contains(query));
+                
+
+            var movieDto = moviesQuery.ToList().Select(Mapper.Map<Movie, MovieDto>);
+            return Ok(movieDto);
         }
 
         //GET api/movies/1
@@ -49,6 +53,7 @@ namespace Vidly.Controllers.Api
             if (!ModelState.IsValid)
                 return BadRequest();
 
+            movieDto.NumberAvailable = movieDto.NumberInStock;
             var movie = Mapper.Map<MovieDto, Movie>(movieDto);
             _context.Movies.Add(movie);
             _context.SaveChanges();

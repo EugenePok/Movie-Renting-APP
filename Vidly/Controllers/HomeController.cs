@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Vidly.Controllers
+namespace MovieWeb.Controllers
 {
     [AllowAnonymous]
     public class HomeController : Controller

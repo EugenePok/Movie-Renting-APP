@@ -4,10 +4,10 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Vidly.Models;
-using Vidly.ViewModels;
+using MovieWeb.Models;
+using MovieWeb.ViewModels;
 
-namespace Vidly.Controllers
+namespace MovieWeb.Controllers
 {
     public class CustomerController : Controller
     {

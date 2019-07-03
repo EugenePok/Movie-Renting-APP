@@ -4,10 +4,10 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using Vidly.Dtos;
-using Vidly.Models;
+using MovieWeb.Dtos;
+using MovieWeb.Models;
 
-namespace Vidly.Controllers.Api
+namespace MovieWeb.Controllers.Api
 {
     public class RentalsController : ApiController
     {

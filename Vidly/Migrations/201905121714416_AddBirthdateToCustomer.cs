@@ -1,4 +1,4 @@
-namespace Vidly.Migrations
+namespace MovieWeb.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

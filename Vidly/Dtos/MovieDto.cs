@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
-using Vidly.Models;
+using MovieWeb.Models;
 
-namespace Vidly.Dtos
+namespace MovieWeb.Dtos
 {
     public class MovieDto
     {
@@ -24,5 +24,7 @@ namespace Vidly.Dtos
 
         [Range(1, 20)]
         public byte NumberInStock { get; set; }
+
+        public byte NumberAvailable { get; set; }
     }
 }

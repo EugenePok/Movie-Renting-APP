@@ -4,10 +4,10 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Vidly.Models;
-using Vidly.ViewModels;
+using MovieWeb.Models;
+using MovieWeb.ViewModels;
 
-namespace Vidly.Controllers
+namespace MovieWeb.Controllers
 {
     public class MoviesController : Controller
     {
@@ -65,6 +65,7 @@ namespace Vidly.Controllers
             if (movie.Id == 0)
             {
                 movie.DateAdded = DateTime.Now;
+                movie.NumberAvailable = movie.NumberInStock;
                 _context.Movies.Add(movie);
             }
                 
@@ -73,6 +74,7 @@ namespace Vidly.Controllers
                 var movieInDb = _context.Movies.Single(m => m.Id == movie.Id);
                 movieInDb.GenreId = movie.GenreId;
                 movieInDb.Name = movie.Name;
+                movieInDb.NumberAvailable = (byte)(movie.NumberAvailable + (movie.NumberInStock - movieInDb.NumberAvailable));
                 movieInDb.NumberInStock = movie.NumberInStock;
                 movieInDb.ReleaseDate = movie.ReleaseDate;
             }

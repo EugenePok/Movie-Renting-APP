@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
-using Vidly.Models;
+using MovieWeb.Models;
 
-namespace Vidly.ViewModels
+namespace MovieWeb.ViewModels
 {
     public class MovieFormViewModel
     {
